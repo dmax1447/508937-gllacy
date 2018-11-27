@@ -2,12 +2,12 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
+    <title>Магазин мороженного собственного производства на развес "Глейси"</title>
   </head>
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <img class="logo" src="img/logo.svg" width="154" height="64" alt="GlacyShop">
+        <img class="logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженного GlacyShop">
         <ul class="site-navigation">
           <li class="site-navigation-item site-navigation-item-active">
             Каталог
@@ -19,13 +19,73 @@
             <a class="site-navigation-item-link" href="about.html">О компании</a>
           </li>
         </ul>
-        <div class="header-button-list">
-          <a class="header-button header-button-search" href="/">Поиск</a>
-          <a class="header-button header-button-login" href="/">Вход</a>
-          <a class="header-button header-button-chart" href="/">2 товара</a>
+        <div class="header-section-list">
+          <a class="header-button header-button-search" href="search.html">Поиск</a>
+          <section class="search-popup search-hidden">
+            <h2 class="visually-hidden">Поиск</h2>
+            <form id="search-form" class="search-form" method="post" action="https://echo.htmlacademy.ru">
+              <input id="input-search" class="header-search-input" type="search" name="search" placeholder="Что ищем?">
+            </form>
+          </section>
+          <a class="header-button header-button-login" href="login.html">Вход</a>
+          <section class="login-popup login-hidden">
+            <h2 class="visually-hidden">Вход на сайт</h2>
+            <form id="login-form" method="post" action="https://echo.htmlacademy.ru">
+              <label for="email" class="visually-hidden">Ваш логин(электронная почта):</label>
+              <input id="email" class="login-email-input" type="email" name="email" placeholder="Электронная почта" required>
+              <label for="password" class="visually-hidden">Ваш пароль:</label>
+              <input id="password" class="login-password-input" type="password" name="password" placeholder="Пароль" required>
+              <button type="submit" class="btn btn-rounded btn-red" name="enter">Войти</button>
+              <a class="login-form-link" href="forgot-password.html">Забыли пароль?</a>
+              <a class="login-form-link" href="register.html">Регистрация</a>
+            </form>
+          </section>
+          <a class="header-button header-button-chart" href="chart.html">Пусто</a>
+          <section class="chart-popup chart-hidden">
+            <h2 class="visually-hidden">Товары в корзине</h2>
+            <table class="chart-table">
+              <tr class="good-row">
+                <td class="cell-good-delete">
+                  <button type="button" class="btn-delete" name="delete">Удалить товар</button>
+                </td>
+                <td class="cell-good-image">
+                  <img src="img/good-chart-01.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                </td>
+                <td class="cell-good-name">
+                  <p class="chart-good-name">Пломбир с&nbsp;апельсиновым джемом</p>
+                </td>
+                <td class="cell-good-price">
+                  <p class="chart-good-price-weight">1,5 кг х <span class="chart-good-price">200 руб.</span></p>
+                </td>
+                <td class="cell-good-cost">
+                  <p class="chart-good-cost">300 руб.</p>
+                </td>
+              </tr>
+              <tr class="good-row">
+                <td class="cell-good-delete">
+                  <button type="button" class="btn-delete" name="delete">Удалить товар</button>
+                </td>
+                <td class="cell-good-image">
+                  <img src="img/good-chart-02.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                </td>
+                <td class="cell-good-name">
+                  <p class="chart-good-name">Клубничный пломбир с&nbsp;присыпкой из&nbsp;белого шоколада</p>
+                </td>
+                <td class="cell-good-price">
+                  <p class="chart-good-price-weight">1,5 кг х <span class="chart-good-price">300 руб.</span></p>
+                </td>
+                <td class="cell-good-cost">
+                  <p class="chart-good-cost">450 руб.</p>
+                </td>
+              </tr>
+            </table>
+            <p class="chart-total-cost">Итого: 750 руб.</p>
+            <a class="btn btn-rounded btn-red" href="checkout.html">Оформить заказ</a>
+          </section>
         </div>
       </nav>
       <div class="contact-info">
+        <h2 class="visually-hidden">Режим работы и телефон</h2>
         <p class="contact-info-work-telephone">
           c&nbsp;10&nbsp;до&nbsp;20, ежедневно
           <a href="tel:+78124502525" class="telephone">8&nbsp;812&nbsp;450-25-25</a>

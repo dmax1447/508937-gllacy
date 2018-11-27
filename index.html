@@ -2,15 +2,32 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
+    <title>Магазин мороженного собственного производства на развес "Глейси"</title>
   </head>
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <img class="logo" src="img/logo.svg" width="154" height="64" alt="GlacyShop">
+        <img class="logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженного GlacyShop">
         <ul class="site-navigation">
-          <li class="site-navigation-item">
+          <li class="site-navigation-item site-navigation-item-active">
             <a class="site-navigation-item-link" href="catalog.html">Каталог</a>
+            <ul class="catalog-menu">
+              <li class="catalog-menu-item catalog-menu-item-new">
+                <a class="childmenu-item-link" href="inner-new.html">Новинки</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="childmenu-item-link" href="inner-creamy.html">Сливочноe</a>
+              </li>
+              <li class="catalog-menu-item catalog-menu-item-active">
+                <a class="childmenu-item-link" href="inner-sherbets.html">Щербеты</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="childmenu-item-link" href="inner-fruit-ice.html">Фруктовый лед</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="childmenu-item-link" href="inner-melorin.html">Мелорин</a>
+              </li>
+            </ul>
           </li>
           <li class="site-navigation-item">
             <a class="site-navigation-item-link" href="checkout.html">Доставка и оплата</a>
@@ -19,13 +36,39 @@
             <a class="site-navigation-item-link" href="about.html">О компании</a>
           </li>
         </ul>
-        <div class="header-button-list">
-          <a class="header-button header-button-search" href="/">Поиск</a>
-          <a class="header-button header-button-login" href="/">Вход</a>
-          <a class="header-button header-button-chart" href="/">Пусто</a>
+        <div class="header-section-list">
+
+          <a class="header-button header-button-search" href="search.html">Поиск</a>
+          <section class="search-popup search-hidden">
+            <h2 class="visually-hidden">Поиск</h2>
+            <form id="search-form" class="search-form" method="post" action="https://echo.htmlacademy.ru">
+              <input id="input-search" class="header-search-input" type="search" name="search" placeholder="Что ищем?">
+            </form>
+          </section>
+
+          <a class="header-button header-button-login" href="login.html">Вход</a>
+          <section class="login-popup login-hidden">
+            <h2 class="visually-hidden">Вход на сайт</h2>
+            <form id="login-form" method="post" action="https://echo.htmlacademy.ru">
+              <label for="email" class="visually-hidden">Ваш логин(электронная почта):</label>
+              <input id="email" class="login-email-input" type="email" name="email" placeholder="Электронная почта" required>
+              <label for="password" class="visually-hidden">Ваш пароль:</label>
+              <input id="password" class="login-password-input" type="password" name="password" placeholder="Пароль" required>
+              <button type="submit" class="btn btn-rounded btn-orange" name="enter">Войти</button>
+              <a class="login-form-link" href="forgot-password.html">Забыли пароль?</a>
+              <a class="login-form-link" href="register.html">Регистрация</a>
+            </form>
+          </section>
+
+          <a class="header-button header-button-chart" href="chart.html">Пусто</a>
+          <section class="chart-popup chart-hidden">
+            <h2 class="visually-hidden">Товары в корзине</h2>
+          </section>
+
         </div>
       </nav>
       <div class="contact-info">
+        <h2 class="visually-hidden">Режим работы и телефон</h2>
         <p class="contact-info-work-telephone">
           c&nbsp;10&nbsp;до&nbsp;20, ежедневно
           <a href="tel:+78124502525" class="telephone">8&nbsp;812&nbsp;450-25-25</a>
@@ -39,7 +82,7 @@
       <!-- каталог -->
       <section class="features">
         <h1 class="main-header">Магазин &laquo;Глэйси&raquo;&nbsp;&mdash; это онлайн- и&nbsp;офлайн-магазин по&nbsp;продаже мороженого собственного производства на&nbsp;развес</h1>
-        <h3 class="features-header">Премущества нашего мороженного:</h3>
+        <h3 class="features-title">Премущества нашего мороженного:</h3>
         <ul class="features-list">
           <li class="features-item">Все наше мороженое изготавливается на&nbsp;собственном производстве, с&nbsp;использованием современного оборудования и&nbsp;проверенных временем технологий.</li>
           <li class="features-item">Для приготовления мороженого используются настоящие сливки и&nbsp;молоко высочайшего качества. Все дополнительные ингредиенты и&nbsp;добавки произведены из&nbsp;натурального, экологически чистого сырья.</li>
@@ -54,15 +97,29 @@
           </h3>
       </article>
       <section class="subscribe">
-        <h3 class="subscribe-header">Подписатья на нас:</h3>
+        <h3 class="subscribe-title">Подписатья на нас:</h3>
         <p class="subscribe-slogan">Подпишитесь на&nbsp;нашу сладкую рассылку и&nbsp;будете всегда в&nbsp;курсе всего самого вкусного, что у&nbsp;нас происходит. Обещаем не&nbsp;спамить и&nbsp;не&nbsp;слать всякой ненужной ерунды. Честно =)</p>
-        <form class="subscribe-form" id="subscribe-form">
-          <input class="subscribe-input" type="email" id="subscribe-email" placeholder="semenych@hyandex.ru">
-          <label class="subscribe-label" for="subscribe-email">Электронная почта</label>
-          <button class="button-submit" type="submit">Отправить</button>
+        <form id="subscribe-form" class="subscribe-form" method="post" action="https://echo.htmlacademy.ru">
+          <label for="subscribe-email" class="visually-hidden">Электронная почта</label>
+          <input id="subscribe-email" class="subscribe-input" type="email" name="email" placeholder="semenych@hyandex.ru">
+          <button type="submit" class="btn btn-rounded btn-orange" name="submit">Отправить</button>
         </form>
       </section>
       <!-- карта -->
+      <section class="feedback-popup feedback-hidden">
+        <form id="feedback-form" class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
+          <h2 class="feedback-title">Мы обязательно вам ответим!</h2>
+          <button type="button" class="btn-close btn-feedback" name="close">Закрыть</button>
+          <label for="feedback-name" class="visually-hidden">Ваше имя:</label>
+          <input id="feedback-name" class="feedback-input" type="text" name="name" placeholder="Как вас зовут?">
+          <label for="feedback-email" class="visually-hidden">Ваша электронная почта:</label>
+          <input id="feedback-email" class="feedback-input" type="email" name="email" placeholder="Электронная почта">
+          <label for="feedback-message" class="visually-hidden">Ваше сообщение:</label>
+          <textarea id="feedback-message" class="feedback-textarea" name="message" placeholder="Напишите что нибудь" rows="5"></textarea>
+          <button type="submit" class="btn btn-rounded btn-orange" name="submit">Отправить</button>
+        </form>
+      </section>
+
     </main>
     <footer class="main-footer">
       <div class="social">
