@@ -3,14 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин мороженного собственного производства на развес "Глейси"</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
-    <header class="main-header">
+  <body class="page">
+    <header class="main-header container">
       <nav class="main-navigation">
         <img class="logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженного GlacyShop">
         <ul class="site-navigation">
-          <li class="site-navigation-item site-navigation-item-active">
+          <li class="site-navigation-item site-navigation-item-current">
             Каталог
+            <ul class="catalog-menu">
+              <li class="catalog-menu-item catalog-menu-item-new">
+                <a class="childmenu-item-link" href="inner-new.html">Новинки</a>
+              </li>
+              <li class="catalog-menu-item catalog-menu-item-current">
+                <a class="childmenu-item-link" href="inner-creamy.html">Сливочноe</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="childmenu-item-link" href="inner-sherbets.html">Щербеты</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="childmenu-item-link" href="inner-fruit-ice.html">Фруктовый лед</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="childmenu-item-link" href="inner-melorin.html">Мелорин</a>
+              </li>
+            </ul>
           </li>
           <li class="site-navigation-item">
             <a class="site-navigation-item-link" href="checkout.html">Доставка и оплата</a>
@@ -40,7 +59,7 @@
               <a class="login-form-link" href="register.html">Регистрация</a>
             </form>
           </section>
-          <a class="header-button header-button-chart" href="chart.html">Пусто</a>
+          <a class="header-button header-button-chart-full" href="chart.html">Пусто</a>
           <section class="chart-popup chart-hidden">
             <h2 class="visually-hidden">Товары в корзине</h2>
             <table class="chart-table">
@@ -92,21 +111,21 @@
         </p>
       </div>
     </header>
-    <main>
-      <h1 class="page-title">Сливочное мороженное</h1>
+    <main class="container">
+      <h1 class="inner-page-title">Сливочное мороженное</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-item link" href="index.html">Главная</a>
+          <a class="breadcrumbs-item-link" href="index.html">Главная</a>
         </li>
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-item link" href="catalog.html">Каталог</a>
+          <a class="breadcrumbs-item-link" href="catalog.html">Каталог</a>
         </li>
-        <li class="breadcrumbs-item active">
+        <li class="breadcrumbs-item-active">
           Сливочное
         </li>
       </ul>
       <section class="filters">
-        <h2 class="filters-header">Фильтр товаров</h2>
+        <h2 class="visually-hidden">Фильтр товаров</h2>
         <!-- здесь будет форма с фильтрами -->
       </section>
       <ul class="catalog-list">
@@ -233,7 +252,7 @@
 
       </ul>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <div class="social">
         <a class="social-button social-button-twitter" href="">twitter</a>
         <a class="social-button social-button-instagramm" href="">instagramm</a>
@@ -241,7 +260,7 @@
         <a class="social-button social-button-vk" href="">vk</a>
       </div>
       <div class="production-info">
-        <a class="production-info-link" href="supllpiers.html">Для поставщиков</a>
+        <a class="production-suplliers" href="supllpiers.html">Для поставщиков</a>
         <a class="production-info-link" href="about-production.html">О производстве</a>
       </div>
       <div class="documents">

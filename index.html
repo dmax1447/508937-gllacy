@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин мороженного собственного производства на развес "Глейси"</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
-    <header class="main-header">
+  <body class="page">
+    <header class="main-header container">
       <nav class="main-navigation">
         <img class="logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженного GlacyShop">
         <ul class="site-navigation">
-          <li class="site-navigation-item site-navigation-item-active">
+          <li class="site-navigation-item site-navigation-item-current">
             <a class="site-navigation-item-link" href="catalog.html">Каталог</a>
             <ul class="catalog-menu">
               <li class="catalog-menu-item catalog-menu-item-new">
@@ -68,7 +70,7 @@
         </div>
       </nav>
       <div class="contact-info">
-        <h2 class="visually-hidden">Режим работы и телефон</h2>
+        <h3 class="visually-hidden">Режим работы и телефон</h2>
         <p class="contact-info-work-telephone">
           c&nbsp;10&nbsp;до&nbsp;20, ежедневно
           <a href="tel:+78124502525" class="telephone">8&nbsp;812&nbsp;450-25-25</a>
@@ -76,18 +78,22 @@
       </div>
     </header>
 
-    <main>
+    <main class="container">
       <!-- слайдер -->
       <!-- акции -->
       <!-- каталог -->
       <section class="features">
-        <h1 class="main-header">Магазин &laquo;Глэйси&raquo;&nbsp;&mdash; это онлайн- и&nbsp;офлайн-магазин по&nbsp;продаже мороженого собственного производства на&nbsp;развес</h1>
-        <h3 class="features-title">Премущества нашего мороженного:</h3>
+        <h1 class="main-page-title">Магазин &laquo;Глэйси&raquo;&nbsp;&mdash; это онлайн- и&nbsp;офлайн-магазин по&nbsp;продаже мороженого собственного производства на&nbsp;развес</h1>
+        <h3 class="visually-hidden">Премущества нашего мороженного:</h3>
         <ul class="features-list">
-          <li class="features-item">Все наше мороженое изготавливается на&nbsp;собственном производстве, с&nbsp;использованием современного оборудования и&nbsp;проверенных временем технологий.</li>
-          <li class="features-item">Для приготовления мороженого используются настоящие сливки и&nbsp;молоко высочайшего качества. Все дополнительные ингредиенты и&nbsp;добавки произведены из&nbsp;натурального, экологически чистого сырья.</li>
-          <li class="features-item">Закупка ингредиентов производится только у&nbsp;проверенных фермерских хозяйств и&nbsp;компаний, с&nbsp;которыми нас связывает долговременное сотрудничество.</li>
-          <li class="features-item">Доставка нашего мороженого до&nbsp;заказчиков осуществляется в&nbsp;специальном термопаке, который не&nbsp;дает мороженому растаять в&nbsp;пути и&nbsp;позволяет сохранить превосходный вкус.</li>
+          <div class="features-column-left">
+            <li class="features-item features-item-tech">Все наше мороженое изготавливается на&nbsp;собственном производстве, с&nbsp;использованием современного оборудования и&nbsp;проверенных временем технологий.</li>
+            <li class="features-item features-item-eco">Для приготовления мороженого используются настоящие сливки и&nbsp;молоко высочайшего качества. Все дополнительные ингредиенты и&nbsp;добавки произведены из&nbsp;натурального, экологически чистого сырья.</li>
+          </div>
+          <div class="features-column-right">
+            <li class="features-item features-item-farms">Закупка ингредиентов производится только у&nbsp;проверенных фермерских хозяйств и&nbsp;компаний, с&nbsp;которыми нас связывает долговременное сотрудничество.</li>
+            <li class="features-item features-item-thermo">Доставка нашего мороженого до&nbsp;заказчиков осуществляется в&nbsp;специальном термопаке, который не&nbsp;дает мороженому растаять в&nbsp;пути и&nbsp;позволяет сохранить превосходный вкус.</li>
+          </div>
         </ul>
       </section>
       <article class="blog">
@@ -97,7 +103,7 @@
           </h3>
       </article>
       <section class="subscribe">
-        <h3 class="subscribe-title">Подписатья на нас:</h3>
+        <h3 class="visually-hidden">Подписатья на нас:</h3>
         <p class="subscribe-slogan">Подпишитесь на&nbsp;нашу сладкую рассылку и&nbsp;будете всегда в&nbsp;курсе всего самого вкусного, что у&nbsp;нас происходит. Обещаем не&nbsp;спамить и&nbsp;не&nbsp;слать всякой ненужной ерунды. Честно =)</p>
         <form id="subscribe-form" class="subscribe-form" method="post" action="https://echo.htmlacademy.ru">
           <label for="subscribe-email" class="visually-hidden">Электронная почта</label>
@@ -121,7 +127,7 @@
       </section>
 
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <div class="social">
         <a class="social-button social-button-twitter" href="">twitter</a>
         <a class="social-button social-button-instagramm" href="">instagramm</a>
@@ -129,7 +135,7 @@
         <a class="social-button social-button-vk" href="">vk</a>
       </div>
       <div class="production-info">
-        <a class="production-info-link" href="supllpiers.html">Для поставщиков</a>
+        <a class="production-suplliers" href="suplliers.html">Для поставщиков</a>
         <a class="production-info-link" href="about-production.html">О производстве</a>
       </div>
       <div class="documents">

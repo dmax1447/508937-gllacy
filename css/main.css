@@ -1,0 +1,367 @@
+/* шрифты */
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Roboto";
+  src: url("../fonts/roboto400.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Roboto";
+  src: url("../fonts/roboto500.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Roboto";
+  src: url("../fonts/roboto700.woff2");
+  font-display: swap;
+}
+
+/* скрываем попапы */
+
+.search-hidden,
+.login-hidden,
+.chart-hidden,
+.feedback-hidden {
+  display: none;
+}
+
+/* основные параметы страниц */
+
+.page {
+  background-color: rgb(132, 157, 143);
+  color: rgb(50, 50, 50);
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 22px;
+}
+
+.page ul {
+  list-style: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+a:hover,
+a:active {
+  color: rgb(255, 188, 158);
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+}
+
+/* хедер - навигация - главное меню */
+
+.site-navigation-item {
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.site-navigation-item-current {
+   background-color: rgb(208, 112, 88);
+   color: white;
+}
+
+.site-navigation-item-link:hover {
+  background-color: rgb(247, 246, 243);
+  color: black;
+}
+
+.site-navigation-item-link:active {
+  background-color: rgb(237, 237, 237);
+  box-shadow: inset 0 2px 1px 0 rgb(105, 105, 105);
+}
+
+/* хедер - главное меню - подменю */
+
+.catalog-menu {
+  background-color: rgb(248, 247, 244);
+}
+
+.catalog-menu-item {
+  color: rgb(50, 50, 50);
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.catalog-menu-item:hover {
+  background-color: rgb(251, 222, 215);
+}
+
+.catalog-menu-item:active {
+  background-color: rgb(246, 181, 165);
+}
+
+.catalog-menu-item-new {
+  font-weight: 700;
+}
+
+.catalog-menu-item-current {
+  background-color: rgb(208, 112, 88);
+}
+
+/* хедер - пользовательское меню в заголовке - кнопки */
+
+.header-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  background-repeat: no-repeat;
+  color: white;
+  text-align: right;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.header-button:hover {
+  background-color: rgb(248, 247, 244);
+  color: black;
+}
+
+.header-button-search {
+  background-image: url("../img/header-search.svg");
+}
+
+.header-button-login {
+  background-image: url("../img/header-entrance.svg");
+}
+
+.header-button-chart {
+  background-image: url("../img/header-chart.svg");
+}
+
+.header-button-chart-full {
+  background-image: url("../img/header-chart-full.svg");
+}
+
+/* контакты в заголовке */
+
+.contact-info-work-telephone {
+  color: white;
+  text-align: right;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.telephone {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+/* main */
+
+/* хлебные крошки */
+
+.breadcrumbs {
+  color: white;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.breadcrumbs-item-link {
+  text-decoration: underline;
+}
+
+.main-page-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.inner-page-title {
+  color: white;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+/* раздел преймущества */
+.features {
+  background-color: rgb(238, 226, 203);
+  background-image: url("../img/features-background.jpg");
+}
+
+.features-item {
+  background-position: 10px -25px;
+  background-repeat: no-repeat;
+}
+
+.features-item-tech {
+  background-image: url("../img/features-ice-cream.svg");
+}
+
+.features-item-eco {
+  background-image: url("../img/features-eco.svg");
+}
+
+.features-item-farms {
+  background-image: url("../img/features-cow.svg");
+}
+
+.features-item-thermo {
+  background-image: url("../img/features-thermometer.svg");
+}
+
+/* раздел блог - новости */
+
+.blog {
+  background-color: white;
+  background-image: url("../img/blog-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.blog-intro {
+  font-weight: 500;
+}
+
+.article-link {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+/* раздел подписка */
+
+.subscribe {
+  background-color: rgb(248, 247, 244);
+  background-image: url("../img/subscribe-background.jpg");
+}
+
+/* каталог */
+
+.list-item-header-link {
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.catalog-item-price {
+  color: white;
+  text-align: left;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.price-value {
+  color: white;
+  text-align: left;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+/* футер - ссылки и копирайт */
+
+.main-footer {
+  color: white;
+  text-decoration: underline;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.production-suplliers {
+  background-image: url("../img/production-info-heart.svg");
+  background-repeat: no-repeat;
+  font-weight: 700;
+}
+
+.copyright-link {
+  font-size: 12px;
+}
+
+/* футер - социальные кнопки  и ссылки */
+
+.social-button {
+  background-repeat: no-repeat;
+}
+
+.social-button-twitter {
+  background-image: url("../img/social-button-twitter.svg");
+}
+
+.social-button-instagramm {
+  background-image: url("../img/social-button-instagram.svg");
+}
+
+.social-button-facebook {
+  background-image: url("../img/social-button-fb.svg");
+}
+
+.social-button-vk {
+  background-image: url("../img/social-button-vk.svg");
+}
+
+/* кнопки */
+
+.btn {
+  box-shadow: 0 1px 2px 0 rgb(172, 16, 0);
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.btn-rounded {
+  border-radius: 5px;
+}
+
+.btn-orange {
+  background-color: #e84d36;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.btn-orange:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #ed715e;
+  box-shadow: 0 2px 2px #ac1000;
+}
+
+.btn-orange:active {
+  background-color: rgba(0, 0, 0, 0.07);
+  background-color: #e1613e;
+  box-shadow: inset 0 2px 2px #942718;
+}
