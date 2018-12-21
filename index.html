@@ -5,13 +5,18 @@
     <title>Магазин мороженного собственного производства на развес "Глейси"</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b8c7161f-fd0f-46cf-acf8-b68102e4340c&lang=ru_RU"></script>
   </head>
   <body class="page">
-    <header class="main-header container">
+    <input type="radio" id="slide1-radio" class="slide-radio-btn visually-hidden" name="slide-radio" checked>
+    <input type="radio" id="slide2-radio" class="slide-radio-btn visually-hidden" name="slide-radio">
+    <input type="radio" id="slide3-radio" class="slide-radio-btn visually-hidden" name="slide-radio">
+    <div class="site-wrapper">
+      <header class="main-header container">
       <nav class="main-navigation">
         <img class="logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженного GlacyShop">
         <ul class="site-navigation">
-          <li class="site-navigation-item">
+          <li class="site-navigation-item" tabindex="0">
             <a class="site-navigation-item-link" href="#catalog">Каталог</a>
             <ul class="catalog-menu catalog-menu-hidden">
               <li class="catalog-menu-item-new">
@@ -24,7 +29,7 @@
                 <a class="childmenu-item-link" href="#icecream">Щербеты</a>
               </li>
               <li class="catalog-menu-item">
-                <a class="childmenu-item-link" href="#fruit-ice">Фруктовый лед</a>
+                <a class="childmenu-item-link" href="#fruit-ice" >Фруктовый лед</a>
               </li>
               <li class="catalog-menu-item">
                 <a class="childmenu-item-link" href="#melorin">Мелорин</a>
@@ -39,10 +44,10 @@
           </li>
         </ul>
         <ul class="user-navigation">
-          <li class="user-navigation-item user-navigation-search">
+          <li class="user-navigation-item user-navigation-search" tabindex="0">
             <a class="header-button header-button-search" href="#search">
               <svg class="header-button-icon search-icon" width="17" height="17">
-                <path class="search-icon-path" fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
+                <path class="search-icon-path" fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"></path>
               </svg>
               <span class="visually-hidden">Поиск</span>
             </a>
@@ -53,14 +58,9 @@
               </form>
             </section>
           </li>
-          <li class="user-navigation-item user-navigation-login">
+          <li class="user-navigation-item user-navigation-login" tabindex="0">
             <a class="header-button header-button-login" href="#login">
-              <svg class="header-button-icon login-icon" width="21" height="19">
-                <g class="login-icon-path" fill="#FFF">
-                  <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
-                  <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
-                </g>
-              </svg>
+              <svg class="header-button-icon login-icon" width="21" height="19"><g class="login-icon-path" fill="#FFF"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"></path><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"></path></g></svg>
               <span class="button-login-text">Вход</span>
             </a>
             <section class="login-popup login-hidden">
@@ -78,16 +78,16 @@
               </form>
             </section>
           </li>
-          <li class="user-navigation-item user-navigation-chart">
+          <li class="user-navigation-item user-navigation-chart" tabindex="0">
             <a class="header-button header-button-chart-full" href="#chart">
-              <svg class="header-button-icon chart-icon" width="21" height="20" viewBox="0 0 21 20"><g fill="#FFF"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg>
+              <svg class="header-button-icon chart-icon" width="21" height="20" viewBox="0 0 21 20"><g fill="#FFF"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"></path><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg>
               <span class="button-chart-text">Пусто</span>
             </a>
           </li>
         </ul>
       </nav>
       <div class="contact-info">
-        <h3 class="visually-hidden">Режим работы и телефон</h2>
+        <h3 class="visually-hidden">Режим работы и телефон</h3>
         <p class="contact-info-work-telephone">
           C&nbsp;10&nbsp;до&nbsp;20, ежедневно
           <a href="tel:+78124502525" class="telephone">8&nbsp;812&nbsp;450-25-25</a>
@@ -97,8 +97,23 @@
 
     <main class="container">
       <section class="slider">
-        слайдер
+        <label for="slide1-radio" class="slide-radio-label slide1-label" tabindex="0">слайд №1: Крем-брюле и пломбир с малиновым джемом</label>
+        <label for="slide2-radio" class="slide-radio-label slide2-label" tabindex="0">слайд №2: Шоколадный пломбир и лимонный сорбет</label>
+        <label for="slide3-radio" class="slide-radio-label slide3-label" tabindex="0">слайд №3: Пломбир с помадкой и клубничный щербет</label>
+        <div class="slide-overlay slide1-overlay">
+          <h2 class="slide-overlay-info">Крем-брюле и&nbsp;пломбир с&nbsp;малиновым джемом</h2>
+          <a class="btn btn-rounded btn-orange btn-slider" href="#">Давайте оба!</a>
+        </div>
+        <div class="slide-overlay slide2-overlay">
+          <h2 class="slide-overlay-info">Шоколадный пломбир и&nbsp;лимонный сорбет</h2>
+          <a class="btn btn-rounded btn-orange btn-slider" href="#">Давайте оба!</a>
+        </div>
+        <div class="slide-overlay slide3-overlay">
+          <h2 class="slide-overlay-info">Пломбир с&nbsp;помадкой и&nbsp;клубничный щербет</h2>
+          <a class="btn btn-rounded btn-orange btn-slider" href="#">Давайте оба!</a>
+        </div>
       </section>
+
       <div class="offer-wrap">
         <section class="offer offer-malina">
           <h3 class="offer-title">Малинка даром!</h3>
@@ -114,7 +129,7 @@
       <section class="hit">
         <h3 class="visually-hidden">Популярные товары нашего каталога:</h3>
         <ul class="hit-list">
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="hit-label"></div>
             <img class="catalog-item-image" src="img/good01.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             <p class="catalog-item-price">
@@ -125,7 +140,7 @@
             </h3>
             <a class="btn btn-rounded btn-orange btn-fast-view" href="#">Быстрый просмотр</a>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="hit-label"></div>
             <img class="catalog-item-image" src="img/good02.jpg" width="267" height="267" alt="Сливочно-кофейное кусочками шоколада">
             <p class="catalog-item-price">
@@ -136,7 +151,7 @@
             </h3>
             <a class="btn btn-rounded btn-orange btn-fast-view" href="#">Быстрый просмотр</a>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="hit-label"></div>
             <img class="catalog-item-image" src="img/good03.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
             <p class="catalog-item-price">
@@ -147,7 +162,7 @@
             </h3>
             <a class="btn btn-rounded btn-orange btn-fast-view" href="#">Быстрый просмотр</a>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="hit-label"></div>
             <img class="catalog-item-image" src="img/good04.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
             <p class="catalog-item-price">
@@ -162,16 +177,12 @@
       </section>
       <section class="features">
         <h1 class="main-page-title">Магазин &laquo;Глэйси&raquo;&nbsp;&mdash; это онлайн- и&nbsp;офлайн-магазин по&nbsp;продаже мороженого собственного производства на&nbsp;развес</h1>
+        <h3 class="visually-hidden">Премущества нашего мороженного:</h3>
         <ul class="features-list">
-          <h3 class="visually-hidden">Премущества нашего мороженного:</h3>
-          <div class="features-column-left">
             <li class="features-item features-item-tech">Все наше мороженое изготавливается на&nbsp;собственном производстве, с&nbsp;использованием современного оборудования и&nbsp;проверенных временем технологий.</li>
             <li class="features-item features-item-eco">Для приготовления мороженого используются настоящие сливки и&nbsp;молоко высочайшего качества. Все дополнительные ингредиенты и&nbsp;добавки произведены из&nbsp;натурального, экологически чистого сырья.</li>
-          </div>
-          <div class="features-column-right">
             <li class="features-item features-item-farms">Закупка ингредиентов производится только у&nbsp;проверенных фермерских хозяйств и&nbsp;компаний, с&nbsp;которыми нас связывает долговременное сотрудничество.</li>
             <li class="features-item features-item-thermo">Доставка нашего мороженого до&nbsp;заказчиков осуществляется в&nbsp;специальном термопаке, который не&nbsp;дает мороженому растаять в&nbsp;пути и&nbsp;позволяет сохранить превосходный вкус.</li>
-          </div>
         </ul>
       </section>
       <div class="blog-and-subscribe-wrap">
@@ -193,26 +204,13 @@
           </div>
         </section>
       </div>
-      <section class="feedback-popup">
-        <form id="feedback-form" class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
-          <h2 class="feedback-title">Мы обязательно вам ответим!</h2>
-          <button type="button" class="btn-close btn-feedback" name="close">
-            <svg width="17" height="17"><path fill="#231F20" d="M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z"/></svg>
-            Закрыть
-          </button>
-          <label for="feedback-name" class="visually-hidden">Ваше имя:</label>
-          <input id="feedback-name" class="feedback-input form-input" type="text" name="name" placeholder="Как вас зовут?">
-          <label for="feedback-email" class="visually-hidden">Ваша электронная почта:</label>
-          <input id="feedback-email" class="feedback-input form-input" type="email" name="email" placeholder="Электронная почта">
-          <label for="feedback-message" class="visually-hidden">Ваше сообщение:</label>
-          <textarea id="feedback-message" class="feedback-textarea form-input" name="message" placeholder="Напишите что нибудь" rows="5"></textarea>
-          <button type="submit" class="btn btn-rounded btn-orange btn-submit" name="submit">Отправить</button>
-        </form>
-      </section>
+
     </main>
-    <section class="map">
+    <section id="map" class="map">
+      <h2 class="visually-hidden">Карта расположения магазина:</h2>
       <div class="container">
         <section class="map-overlay">
+          <h3 class="visually-hidden">Контактная информация:</h3>
             <p class="overlay-adress-intro">Адрес главного офиса и офлайн-магазина:</p>
             <p class="overlay-adress">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
             <p class="overlay-phone-intro">Для заказов по телефону:</p>
@@ -256,5 +254,23 @@
         <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2018</a>
       </div>
     </footer>
+    </div>
+    <section>
+      <form id="feedback-form" class="feedback-form feedback-popup" method="post" action="https://echo.htmlacademy.ru">
+        <h2 class="feedback-title">Мы обязательно вам ответим!</h2>
+        <button type="button" class="btn-close btn-feedback" name="close">
+          <svg width="17" height="17"><path fill="#231F20" d="M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z"/></svg>
+          Закрыть
+        </button>
+        <label for="feedback-name" class="visually-hidden">Ваше имя:</label>
+        <input id="feedback-name" class="feedback-input form-input" type="text" name="name" placeholder="Как вас зовут?">
+        <label for="feedback-email" class="visually-hidden">Ваша электронная почта:</label>
+        <input id="feedback-email" class="feedback-input form-input" type="email" name="email" placeholder="Электронная почта">
+        <label for="feedback-message" class="visually-hidden">Ваше сообщение:</label>
+        <textarea id="feedback-message" class="feedback-textarea form-input" name="message" placeholder="Напишите что нибудь" rows="5"></textarea>
+        <button type="submit" class="btn btn-rounded btn-orange btn-submit" name="submit">Отправить</button>
+      </form>
+    </section>
+    <script src="js/main.js"></script>
   </body>
 </html>
