@@ -3,7 +3,7 @@
 (function () {
   // dom
   const btnShowFeedback = document.querySelector('.btn-show-feedback');
-  const feedbackPopup = document.forms[3];
+  const feedbackPopup = document.querySelector('#feedback-form')
   const btnCloseFeedback = feedbackPopup.querySelector('.btn-close');
   feedbackPopup.classList.add('feedback-hidden');
 
