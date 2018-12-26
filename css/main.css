@@ -356,6 +356,10 @@ a:focus {
   fill: black;
 }
 
+.header-button-chart:hover .chart-icon-path {
+  fill: black;
+}
+
 .header-button-login:hover .login-hidden {
   display: block;
 }
@@ -566,7 +570,7 @@ a:focus {
 
 .features {
   margin-bottom: 40px;
-  padding: 25px 23px 20px 23px;
+  padding: 25px 23px 0 23px;
   background-color: rgb(238, 226, 203);
   background-image: url("../img/features-background.jpg");
   border-radius: 15px;
@@ -582,27 +586,36 @@ a:focus {
 
 .features-item {
   width: 535px;
-  padding-top: 15px;
+  padding-top: 13px;
   padding-bottom: 5px;
-  padding-left: 53px;
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .features-item-tech {
   background-image: url("../img/features-ice-cream.svg");
+  padding-left: 55px;
+  padding-bottom: 8px;
 }
 
 .features-item-eco {
   background-image: url("../img/features-eco.svg");
+  padding-left: 55px;
+  padding-bottom: 0px;
 }
 
 .features-item-farms {
   background-image: url("../img/features-cow.svg");
+  margin-left: 3px;
+  padding-left: 59px;
+  padding-bottom: 8px;
 }
 
 .features-item-thermo {
   background-image: url("../img/features-thermometer.svg");
+  margin-left: 3px;
+  padding-left: 59px;
+  padding-bottom: 0px;
 }
 
 /* раздел блог - новости */
@@ -648,7 +661,7 @@ a:focus {
   align-items: flex-start;
   width: 560px;
   min-height: 230px;
-  padding: 20px 25px;
+  padding: 20px 20px;
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
@@ -677,8 +690,12 @@ a:focus {
   color: white;
 }
 
-.offer-button {
+.btn-rounded.offer-button {
   margin-left: auto;
+  margin-top: auto;
+  margin-bottom: 5px;
+  padding-left: 23px;
+  padding-right: 23px;
 }
 
 .offer-malina {
@@ -733,7 +750,7 @@ a:focus {
 .subscribe-input {
   width: 360px;
   margin-top: 0;
-  margin-right: 10px;
+  margin-right: 15px;
   margin-bottom: 20px;
   padding: 13px 9px;
   border-radius: 5px;
@@ -1020,7 +1037,7 @@ a:focus {
 .copyrights {
   display: flex;
   flex-direction: column;
-  margin-top: 22px;
+  margin-top: 18px;
   margin-bottom: auto;
 }
 
@@ -1332,11 +1349,28 @@ a:focus {
   background-color: rgba(248, 247, 244, 0.2);
   border-radius: 15px;
   cursor: pointer;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  line-height: 20px;
+  border: 0;
+  text-indent: 0.01px;
+  text-overflow: "";
+  background-image: url('../img/icon-down-dir-white.svg');
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+
+.filter-select::-ms-expand{
+display: none;
 }
 
 .filter-select:hover,
 .filter-select:focus {
   color: black;
+  background-image: url('../img/icon-down-dir-black.svg');
 }
 
 .filter-select-option {
