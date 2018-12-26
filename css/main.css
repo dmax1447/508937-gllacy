@@ -593,29 +593,29 @@ a:focus {
 }
 
 .features-item-tech {
-  background-image: url("../img/features-ice-cream.svg");
-  padding-left: 55px;
   padding-bottom: 8px;
+  padding-left: 55px;
+  background-image: url("../img/features-ice-cream.svg");
 }
 
 .features-item-eco {
-  background-image: url("../img/features-eco.svg");
-  padding-left: 55px;
   padding-bottom: 0px;
+  padding-left: 55px;
+  background-image: url("../img/features-eco.svg");
 }
 
 .features-item-farms {
-  background-image: url("../img/features-cow.svg");
   margin-left: 3px;
-  padding-left: 59px;
   padding-bottom: 8px;
+  padding-left: 59px;
+  background-image: url("../img/features-cow.svg");
 }
 
 .features-item-thermo {
-  background-image: url("../img/features-thermometer.svg");
   margin-left: 3px;
-  padding-left: 59px;
   padding-bottom: 0px;
+  padding-left: 59px;
+  background-image: url("../img/features-thermometer.svg");
 }
 
 /* раздел блог - новости */
@@ -691,11 +691,11 @@ a:focus {
 }
 
 .btn-rounded.offer-button {
-  margin-left: auto;
   margin-top: auto;
   margin-bottom: 5px;
-  padding-left: 23px;
+  margin-left: auto;
   padding-right: 23px;
+  padding-left: 23px;
 }
 
 .offer-malina {
@@ -1343,24 +1343,24 @@ a:focus {
 }
 
 .filter-select{
+  position: relative;
   width: 100%;
   padding: 7px 15px;
+  line-height: 20px;
   color: white;
+  text-indent: 0.01px;
+  text-overflow: "";
   background-color: rgba(248, 247, 244, 0.2);
+  background-image: url('../img/icon-down-dir-white.svg');
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  border: 0;
   border-radius: 15px;
   cursor: pointer;
-  position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  line-height: 20px;
-  border: 0;
-  text-indent: 0.01px;
-  text-overflow: "";
-  background-image: url('../img/icon-down-dir-white.svg');
-  background-repeat: no-repeat;
-  background-position: 95% center;
 }
 
 .filter-select::-ms-expand{
