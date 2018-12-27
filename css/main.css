@@ -1265,12 +1265,11 @@ a:focus {
   position: absolute;
   top: 0;
   left: -5px;
-  display: inline-block;
+  display: block;
   width: 20px;
   height: 20px;
   margin-right: 5px;
   padding: 3px;
-  vertical-align: bottom;
   background-clip: content-box;
   border: 3px solid white;
   border-radius: 50%;
@@ -1292,11 +1291,10 @@ a:focus {
   position: absolute;
   top: 0;
   left: -5px;
-  display: inline-block;
+  display: block;
   width: 20px;
   height: 20px;
   margin-right: 5px;
-  vertical-align: bottom;
   border: 2px solid white;
   border-radius: 3px;
   opacity: 0.8;
@@ -1553,6 +1551,7 @@ display: none;
   border: 3px solid white;
   border-radius: 10px;
   cursor: pointer;
+  vertical-align: baseline;
 }
 
 .slide-radio-label:hover,
