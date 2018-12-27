@@ -6,6 +6,8 @@
 *.pdf
 *.psd
 *.sublime*
+.postcss-sorting.json
+package-lock.json
 node_modules/
 npm-debug.*
 Thumbs.db
